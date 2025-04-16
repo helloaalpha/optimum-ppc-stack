@@ -52,6 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// OptimumTools Brand Colors
+				'ppc-black': '#0A0A0A',
+				'amazon-orange': '#FF9900',
+				'graphite-gray': '#4A4A4A',
+				'light-gray-mist': '#F5F5F5',
+				'electric-blue': '#00AEEF',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

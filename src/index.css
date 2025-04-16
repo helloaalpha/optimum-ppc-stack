@@ -96,6 +96,28 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-ppc-black;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    @apply font-bold;
+  }
+
+  .font-secondary {
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+
+  .btn {
+    @apply rounded-md px-4 py-2 font-medium transition duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-amazon-orange text-white hover:bg-amber-600;
+  }
+
+  .btn-secondary {
+    @apply bg-ppc-black text-amazon-orange hover:bg-gray-900;
   }
 }
