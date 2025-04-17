@@ -1,3 +1,4 @@
+
 #root {
   width: 100%;
   margin: 0;
@@ -28,6 +29,43 @@
   }
 }
 
+/* Staggered reveal animation */
+.stagger-reveal > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: staggerReveal 0.5s ease-out forwards;
+}
+
+.stagger-reveal > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-reveal > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-reveal > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-reveal > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-reveal > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-reveal > *:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes staggerReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll reveal animation */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-in-out;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Button hover effects */
 .hover-scale {
   transition: transform 0.3s ease;
@@ -46,4 +84,47 @@
 .card-shadow:hover {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   transform: translateY(-5px);
+}
+
+/* Fade-in-up animation for sections */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle text fade animation */
+.text-fade-in > * {
+  opacity: 0;
+  animation: textFade 0.8s ease forwards;
+}
+
+.text-fade-in > *:nth-child(1) { animation-delay: 0.1s; }
+.text-fade-in > *:nth-child(2) { animation-delay: 0.3s; }
+.text-fade-in > *:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes textFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Subtle hover animation for buttons */
+.subtle-hover {
+  transition: all 0.3s ease;
+}
+
+.subtle-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }

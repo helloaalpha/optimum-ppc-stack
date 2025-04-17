@@ -1,7 +1,10 @@
 
 import { Copy, Search, Calculator, Sparkles, FileCheck } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const ToolPreviewSection = () => {
+  const revealRef = useScrollReveal();
+
   const tools = [
     {
       icon: <Copy className="h-8 w-8 text-amazon-orange" />,
@@ -38,18 +41,18 @@ const ToolPreviewSection = () => {
   return (
     <section className="py-28 px-6 bg-white" id="tools">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-20">
+        <div className="text-center mb-20 fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">Tool Suite</h2>
           <p className="text-graphite-gray/80 text-xl max-w-2xl mx-auto">
             Purpose-built tools for brands, agencies, and PPC teams that demand performance
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={revealRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 reveal-on-scroll stagger-reveal">
           {tools.map((tool, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl overflow-hidden border border-gray-200 transition-all duration-300 relative group h-full hover:border-amazon-orange"
+              className="bg-white rounded-xl overflow-hidden border border-gray-200 transition-all duration-300 relative group h-full hover:border-amazon-orange card-shadow"
             >
               {tool.comingSoon && (
                 <div className="absolute top-6 right-6 bg-light-gray-mist text-ppc-black text-xs font-bold py-1 px-3 rounded-full">

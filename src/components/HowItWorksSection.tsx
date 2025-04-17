@@ -1,7 +1,10 @@
 
 import { Upload, Menu, FileLineChart, Download } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const HowItWorksSection = () => {
+  const revealRef = useScrollReveal();
+
   const steps = [
     {
       icon: <Upload className="h-10 w-10 text-amazon-orange" />,
@@ -28,14 +31,14 @@ const HowItWorksSection = () => {
   return (
     <section className="py-28 px-6 bg-light-gray-mist" id="how-it-works">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-20">
+        <div className="text-center mb-20 fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">How It Works</h2>
           <p className="text-graphite-gray/80 text-xl max-w-2xl mx-auto">
             A clear, four-step process from raw data to optimized output
           </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-6 relative">
+        <div ref={revealRef} className="grid md:grid-cols-4 gap-6 relative reveal-on-scroll stagger-reveal">
           {steps.map((step, index) => (
             <div 
               key={index} 
@@ -52,7 +55,7 @@ const HowItWorksSection = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center fade-in">
           <p className="text-graphite-gray/80 inline-block bg-white py-3 px-6 rounded-full text-sm border border-gray-200">
             <span className="font-semibold">Pro users</span> can apply multiple tools to the same file in sequence.
           </p>

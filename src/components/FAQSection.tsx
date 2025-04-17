@@ -1,9 +1,11 @@
 
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const revealRef = useScrollReveal();
 
   const toggleQuestion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -35,18 +37,18 @@ const FAQSection = () => {
   return (
     <section className="py-20 px-6 bg-light-gray-mist" id="faq">
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
           <p className="text-graphite-gray text-lg max-w-2xl mx-auto">
             Everything you need to know about OptimumTools
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div ref={revealRef} className="space-y-4 reveal-on-scroll">
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className={`bg-white rounded-lg overflow-hidden shadow-sm ${
+              className={`bg-white rounded-lg overflow-hidden shadow-sm transition-all duration-300 ${
                 openIndex === index ? "shadow-md" : ""
               }`}
             >
@@ -63,7 +65,7 @@ const FAQSection = () => {
               </button>
               
               {openIndex === index && (
-                <div className="px-6 pb-6">
+                <div className="px-6 pb-6 animate-accordion-down">
                   <p className="text-graphite-gray">{faq.answer}</p>
                 </div>
               )}

@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
@@ -12,6 +13,15 @@ import CapabilitiesSection from "@/components/CapabilitiesSection";
 import FAQSection from "@/components/FAQSection";
 
 const Index = () => {
+  useEffect(() => {
+    // Set smooth scrolling behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    return () => {
+      document.documentElement.style.scrollBehavior = '';
+    };
+  }, []);
+
   return (
     <div className="min-h-screen overflow-x-hidden bg-white">
       <NavBar />

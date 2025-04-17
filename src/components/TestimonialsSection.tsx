@@ -1,7 +1,10 @@
 
 import { Quote } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const TestimonialsSection = () => {
+  const revealRef = useScrollReveal();
+
   const testimonials = [
     {
       quote: "This is the exact stack we use to manage and scale 8-figure brands at Trivium.",
@@ -26,18 +29,18 @@ const TestimonialsSection = () => {
   return (
     <section className="py-28 px-6 bg-light-gray-mist" id="testimonials">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-20">
+        <div className="text-center mb-20 fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">Trusted by Industry Experts</h2>
           <p className="text-graphite-gray/80 text-xl max-w-2xl mx-auto">
             See why leading PPC professionals rely on our platform
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div ref={revealRef} className="grid md:grid-cols-3 gap-8 reveal-on-scroll stagger-reveal">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index} 
-              className="bg-white p-10 rounded-xl relative border border-gray-100"
+              className="bg-white p-10 rounded-xl relative border border-gray-100 card-shadow"
             >
               <Quote className="h-8 w-8 text-amazon-orange/20 absolute top-6 right-6" />
               

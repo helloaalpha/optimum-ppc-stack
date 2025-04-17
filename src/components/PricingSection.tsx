@@ -1,8 +1,11 @@
 
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const PricingSection = () => {
+  const revealRef = useScrollReveal();
+
   const plans = [
     {
       name: "Free Plan",
@@ -35,14 +38,14 @@ const PricingSection = () => {
   return (
     <section className="py-28 px-6 bg-white" id="pricing">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-20">
+        <div className="text-center mb-20 fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">Pricing</h2>
           <p className="text-graphite-gray/80 text-xl max-w-2xl mx-auto">
             Start for free or upgrade when you're ready to scale
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+        <div ref={revealRef} className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto reveal-on-scroll">
           {plans.map((plan, index) => (
             <div 
               key={index} 
@@ -50,7 +53,7 @@ const PricingSection = () => {
                 plan.popular 
                   ? "bg-light-gray-mist" 
                   : "bg-white border border-gray-200"
-              }`}
+              } card-shadow`}
             >
               {plan.popular && (
                 <div className="bg-amazon-orange text-white text-xs font-bold py-1 px-3 rounded-full inline-block mb-6">
@@ -77,7 +80,7 @@ const PricingSection = () => {
               </ul>
               
               <Button 
-                className={`w-full rounded-full py-6 ${
+                className={`w-full rounded-full py-6 subtle-hover ${
                   plan.popular 
                     ? "bg-ppc-black hover:bg-ppc-black/90 text-white" 
                     : "bg-white hover:bg-light-gray-mist text-ppc-black border border-gray-300"
