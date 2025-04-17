@@ -26,11 +26,11 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-white" id="how-it-works">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
-          <p className="text-graphite-gray text-lg max-w-2xl mx-auto">
+    <section className="py-28 px-6 bg-light-gray-mist" id="how-it-works">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">How It Works</h2>
+          <p className="text-graphite-gray/80 text-xl max-w-2xl mx-auto">
             A clear, four-step process from raw data to optimized output
           </p>
         </div>
@@ -39,22 +39,21 @@ const HowItWorksSection = () => {
           {steps.map((step, index) => (
             <div 
               key={index} 
-              className="bg-light-gray-mist p-8 rounded-lg transition-transform hover:-translate-y-1 duration-300"
+              className="bg-white p-8 rounded-xl transition-transform hover:-translate-y-1 duration-300 border border-gray-100"
             >
-              <div className="mb-6">{step.icon}</div>
-              <h3 className="text-xl font-bold mb-3">Step {index + 1}: {step.title}</h3>
-              <p className="text-graphite-gray">{step.description}</p>
-
-              {/* Connector lines between steps (desktop only) */}
-              {index < 3 && (
-                <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 -z-10" />
-              )}
+              <div className="mb-6 flex justify-center">
+                <div className="bg-light-gray-mist p-4 rounded-full">
+                  {step.icon}
+                </div>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-center">{step.title}</h3>
+              <p className="text-graphite-gray/80 text-center">{step.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 text-center">
-          <p className="text-graphite-gray inline-block bg-light-gray-mist py-2 px-4 rounded-full text-sm">
+        <div className="mt-16 text-center">
+          <p className="text-graphite-gray/80 inline-block bg-white py-3 px-6 rounded-full text-sm border border-gray-200">
             <span className="font-semibold">Pro users</span> can apply multiple tools to the same file in sequence.
           </p>
         </div>

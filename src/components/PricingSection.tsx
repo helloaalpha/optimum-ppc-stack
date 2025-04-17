@@ -33,54 +33,54 @@ const PricingSection = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-white" id="pricing">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Pricing</h2>
-          <p className="text-graphite-gray text-lg max-w-2xl mx-auto">
+    <section className="py-28 px-6 bg-white" id="pricing">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">Pricing</h2>
+          <p className="text-graphite-gray/80 text-xl max-w-2xl mx-auto">
             Start for free or upgrade when you're ready to scale
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`rounded-lg p-8 border ${
+              className={`rounded-xl p-10 ${
                 plan.popular 
-                  ? "border-amazon-orange shadow-lg" 
-                  : "border-gray-200"
+                  ? "bg-light-gray-mist" 
+                  : "bg-white border border-gray-200"
               }`}
             >
               {plan.popular && (
-                <div className="bg-amazon-orange text-white text-xs font-bold py-1 px-3 rounded-full inline-block mb-4">
+                <div className="bg-amazon-orange text-white text-xs font-bold py-1 px-3 rounded-full inline-block mb-6">
                   Most Popular
                 </div>
               )}
               
-              <h3 className="text-2xl font-bold">{plan.name}</h3>
+              <h3 className="text-3xl font-bold">{plan.name}</h3>
               
-              <div className="mt-4 mb-6">
-                <span className="text-3xl md:text-4xl font-bold">{plan.price}</span>
+              <div className="mt-6 mb-8">
+                <span className="text-5xl font-bold">{plan.price}</span>
                 {plan.period && (
                   <span className="text-graphite-gray">{plan.period}</span>
                 )}
               </div>
               
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-4 mb-10">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center">
-                    <Check className="h-5 w-5 text-amazon-orange mr-2" />
-                    <span className="text-graphite-gray">{feature}</span>
+                    <Check className="h-5 w-5 text-amazon-orange mr-3 flex-shrink-0" />
+                    <span className="text-graphite-gray/80">{feature}</span>
                   </li>
                 ))}
               </ul>
               
               <Button 
-                className={`w-full ${
+                className={`w-full rounded-full py-6 ${
                   plan.popular 
-                    ? "bg-amazon-orange hover:bg-amber-600 text-white" 
-                    : "bg-light-gray-mist hover:bg-gray-200 text-ppc-black"
+                    ? "bg-ppc-black hover:bg-ppc-black/90 text-white" 
+                    : "bg-white hover:bg-light-gray-mist text-ppc-black border border-gray-300"
                 }`}
               >
                 {plan.cta}

@@ -13,7 +13,7 @@ import FAQSection from "@/components/FAQSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden bg-white">
       <NavBar />
       <main>
         <HeroSection />
