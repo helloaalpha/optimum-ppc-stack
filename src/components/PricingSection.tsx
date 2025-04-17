@@ -8,24 +8,26 @@ const PricingSection = () => {
       name: "Free Plan",
       price: "$0",
       features: [
-        "1 Tool Per Day",
-        "No credit card needed",
-        "Daily reset (midnight UTC)"
+        "Access 1 tool per day",
+        "Resets daily at midnight UTC",
+        "No credit card required",
+        "Full compatibility with standard reports"
       ],
-      cta: "Get Started",
+      cta: "Start Free Today",
       popular: false
     },
     {
-      name: "Pro Plan",
+      name: "Unlimited",
       price: "$10",
       period: "/month",
       features: [
-        "Unlimited daily access",
-        "Multi-tool workflow",
-        "Early access to new tools",
-        "Priority feature requests"
+        "Unlimited tool usage",
+        "Tool chaining capabilities",
+        "Early access to new features",
+        "Priority updates",
+        "Support for all Amazon marketplaces"
       ],
-      cta: "Upgrade to Pro",
+      cta: "Go Unlimited",
       popular: true
     }
   ];
@@ -34,9 +36,9 @@ const PricingSection = () => {
     <section className="py-20 px-6 bg-white" id="pricing">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Simple Pricing</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Pricing</h2>
           <p className="text-graphite-gray text-lg max-w-2xl mx-auto">
-            Choose the plan that works best for your Amazon PPC needs
+            Start for free or upgrade when you're ready to scale
           </p>
         </div>
 

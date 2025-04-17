@@ -1,30 +1,36 @@
 
-import { Copy, Search, Calculator, Sparkles } from "lucide-react";
+import { Copy, Search, Calculator, Sparkles, FileCheck } from "lucide-react";
 
 const ToolPreviewSection = () => {
   const tools = [
     {
       icon: <Copy className="h-8 w-8 text-amazon-orange" />,
       name: "Deduplication Tool",
-      description: "Remove duplicate search terms or ASINs instantly",
+      description: "Identify and remove redundant keywords and terms, preserving efficiency and budget",
       comingSoon: false
     },
     {
       icon: <Search className="h-8 w-8 text-amazon-orange" />,
       name: "Negative Keyword Wizard",
-      description: "Auto-detect waste and generate negatives based on logic rules",
+      description: "Quickly filter, identify, and block wasteful terms—using performance-based criteria",
       comingSoon: false
     },
     {
       icon: <Calculator className="h-8 w-8 text-amazon-orange" />,
       name: "Bulk Bid Optimizer",
-      description: "Adjust bids in bulk with performance-based recommendations",
+      description: "Apply strategic bid adjustments across campaigns or ASINs in just a few clicks",
       comingSoon: false
     },
     {
       icon: <Sparkles className="h-8 w-8 text-amazon-orange" />,
       name: "STIN",
-      description: "Smart Term Intent Navigator — AI-based clustering & targeting",
+      description: "Extract actionable insights from your Impression Share reports—without spreadsheet overwhelm",
+      comingSoon: true
+    },
+    {
+      icon: <FileCheck className="h-8 w-8 text-amazon-orange" />,
+      name: "Campaign Creation Tool",
+      description: "Generate high-performance campaigns from your keyword, ASIN, or category inputs",
       comingSoon: true
     }
   ];
@@ -33,13 +39,13 @@ const ToolPreviewSection = () => {
     <section className="py-20 px-6 bg-gradient-to-b from-white to-light-gray-mist" id="tools">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Tool Preview</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Tool Suite</h2>
           <p className="text-graphite-gray text-lg max-w-2xl mx-auto">
-            Our specialized tools streamline your PPC workflow
+            Purpose-built tools for brands, agencies, and PPC teams that demand performance
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tools.map((tool, index) => (
             <div 
               key={index}

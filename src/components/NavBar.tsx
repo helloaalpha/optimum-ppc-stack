@@ -17,11 +17,12 @@ const NavBar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <a href="#tools" className="text-graphite-gray hover:text-ppc-black transition-colors">Tools</a>
+          <a href="#how-it-works" className="text-graphite-gray hover:text-ppc-black transition-colors">How It Works</a>
           <a href="#pricing" className="text-graphite-gray hover:text-ppc-black transition-colors">Pricing</a>
-          <a href="#about" className="text-graphite-gray hover:text-ppc-black transition-colors">About</a>
+          <a href="#faq" className="text-graphite-gray hover:text-ppc-black transition-colors">FAQ</a>
           <a href="#login" className="text-graphite-gray hover:text-ppc-black transition-colors">Login</a>
           <Button className="bg-amazon-orange hover:bg-amber-600 text-white ml-2">
-            Get Started Free
+            Start Free Today
           </Button>
         </div>
 
@@ -41,11 +42,12 @@ const NavBar = () => {
         <div className="md:hidden bg-white absolute top-16 left-0 w-full p-4 shadow-md">
           <div className="flex flex-col space-y-4">
             <a href="#tools" className="text-graphite-gray hover:text-ppc-black transition-colors py-2">Tools</a>
+            <a href="#how-it-works" className="text-graphite-gray hover:text-ppc-black transition-colors py-2">How It Works</a>
             <a href="#pricing" className="text-graphite-gray hover:text-ppc-black transition-colors py-2">Pricing</a>
-            <a href="#about" className="text-graphite-gray hover:text-ppc-black transition-colors py-2">About</a>
+            <a href="#faq" className="text-graphite-gray hover:text-ppc-black transition-colors py-2">FAQ</a>
             <a href="#login" className="text-graphite-gray hover:text-ppc-black transition-colors py-2">Login</a>
             <Button className="bg-amazon-orange hover:bg-amber-600 text-white w-full">
-              Get Started Free
+              Start Free Today
             </Button>
           </div>
         </div>

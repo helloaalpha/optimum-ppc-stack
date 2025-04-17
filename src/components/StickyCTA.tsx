@@ -24,9 +24,9 @@ const StickyCTA = () => {
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-ppc-black py-3 px-6 shadow-lg z-40 transform transition-transform duration-300">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between">
-        <p className="text-white text-lg mb-3 sm:mb-0">Tired of spreadsheets and macros?</p>
+        <p className="text-white text-lg mb-3 sm:mb-0">Optimize your workflow. Protect your spend.</p>
         <Button className="bg-amazon-orange hover:bg-amber-600 text-white whitespace-nowrap">
-          Try Your First Tool Free
+          Start Free Today
         </Button>
       </div>
     </div>

@@ -8,21 +8,21 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Smarter Amazon PPC, <br />
-              <span className="text-amazon-orange">One Tool</span> at a Time
+              Streamline Your Amazon <br />
+              <span className="text-amazon-orange">PPC Workflow</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-graphite-gray">
-              The same system Mina Elias uses to scale PPC for 7-figure brands at Trivium.
+              Eliminate spreadsheet fatigue and manual processes. Upload your data, apply intelligent filters, and generate clean, ready-to-deploy outputs — in minutes.
             </p>
             
             <div className="mt-8">
               <Button className="bg-amazon-orange hover:bg-amber-600 text-white text-lg py-6 px-8">
-                Try Your First Tool Free
+                Start Free – Access 1 Tool Daily
               </Button>
             </div>
             
             <p className="mt-6 text-sm text-graphite-gray font-secondary italic">
-              Endorsed and used daily by Mina Elias and the Trivium PPC team
+              Trusted by PPC experts, brand operators, and Trivium's own team
             </p>
           </div>
           

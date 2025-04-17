@@ -4,7 +4,7 @@ import { Quote } from "lucide-react";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      quote: "We use OptimumTools every day at Trivium. It saves time, cuts through clutter, and gets results.",
+      quote: "This is the exact stack we use to manage and scale 8-figure brands at Trivium.",
       author: "Mina Elias",
       title: "Founder of Trivium",
       avatar: "/placeholder.svg"
@@ -12,13 +12,13 @@ const TestimonialsSection = () => {
     {
       quote: "The Bulk Bid Optimizer has transformed our campaign management. What took hours now takes minutes.",
       author: "Jane Smith",
-      title: "Amazon PPC Strategist",
+      title: "Senior PPC Analyst",
       avatar: "/placeholder.svg"
     },
     {
-      quote: "Finally, PPC tools that actually do what they're supposed to do without the complexity.",
+      quote: "Finally, PPC tools that actually do what they're supposed to do without the complexity or learning curve.",
       author: "Michael Johnson",
-      title: "E-commerce Agency Owner",
+      title: "E-commerce Agency Director",
       avatar: "/placeholder.svg"
     }
   ];
@@ -27,9 +27,9 @@ const TestimonialsSection = () => {
     <section className="py-20 px-6 bg-light-gray-mist" id="testimonials">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Users Say</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Trusted by Industry Experts</h2>
           <p className="text-graphite-gray text-lg max-w-2xl mx-auto">
-            Trusted by Amazon PPC professionals around the world
+            See why leading PPC professionals rely on our platform
           </p>
         </div>
 

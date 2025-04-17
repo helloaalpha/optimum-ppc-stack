@@ -1,22 +1,27 @@
 
-import { Upload, Menu, FileLineChart } from "lucide-react";
+import { Upload, Menu, FileLineChart, Download } from "lucide-react";
 
 const HowItWorksSection = () => {
   const steps = [
     {
       icon: <Upload className="h-10 w-10 text-amazon-orange" />,
-      title: "Upload your STR or Bulk Sheet",
-      description: "Simply drag and drop your Amazon advertising reports into the platform"
+      title: "Upload",
+      description: "Import your Bulk Sheet or Search Term Report from Amazon"
     },
     {
       icon: <Menu className="h-10 w-10 text-amazon-orange" />,
-      title: "Choose a tool",
-      description: "Select from our specialized tools (free tool per day or full access on Pro)"
+      title: "Select a Tool",
+      description: "Choose from Deduplication, Bid Optimization, or Keyword Filtering"
     },
     {
       icon: <FileLineChart className="h-10 w-10 text-amazon-orange" />,
-      title: "Get fast, export-ready insights",
-      description: "Receive actionable data you can implement immediately"
+      title: "Configure",
+      description: "Use default logic or customize filters to your specifications"
+    },
+    {
+      icon: <Download className="h-10 w-10 text-amazon-orange" />,
+      title: "Download",
+      description: "Export a clean, Amazon-ready file for direct implementation"
     }
   ];
 
@@ -26,11 +31,11 @@ const HowItWorksSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
           <p className="text-graphite-gray text-lg max-w-2xl mx-auto">
-            Optimize your Amazon PPC campaigns in three simple steps
+            A clear, four-step process from raw data to optimized output
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 relative">
+        <div className="grid md:grid-cols-4 gap-6 relative">
           {steps.map((step, index) => (
             <div 
               key={index} 
@@ -41,7 +46,7 @@ const HowItWorksSection = () => {
               <p className="text-graphite-gray">{step.description}</p>
 
               {/* Connector lines between steps (desktop only) */}
-              {index < 2 && (
+              {index < 3 && (
                 <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 -z-10" />
               )}
             </div>
@@ -50,7 +55,7 @@ const HowItWorksSection = () => {
 
         <div className="mt-10 text-center">
           <p className="text-graphite-gray inline-block bg-light-gray-mist py-2 px-4 rounded-full text-sm">
-            <span className="font-semibold">Pro users</span> can upload once and run multiple tools back-to-back.
+            <span className="font-semibold">Pro users</span> can apply multiple tools to the same file in sequence.
           </p>
         </div>
       </div>
